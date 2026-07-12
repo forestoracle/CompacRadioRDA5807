@@ -58,6 +58,7 @@ void setup() {
   // Инициализация радио
   rx.setup(); 
   rx.setSeekThreshold(4); // от 0 до 15. Чем меньше, тем на более слабых станциях останавливаетс поиск
+  delay(1000); // Эта задержка нужна чтобы RDA5807 могла прийти в себя после включения и быть готовой к настройке
   readEEPROM();
   //rx.setVolume(FIX_VOLUME);
   //rx.setFrequency(FIX_STATION);
